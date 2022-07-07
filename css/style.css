@@ -1,0 +1,165 @@
+/*#646669;
+#d1d0c5;
+*/
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-corner {
+    background: #646669;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #646669;
+    border-radius: 2px!important;
+    transition: .125s;
+}
+
+::-webkit-scrollbar-track {
+    background: 0 0;
+}
+
+@keyframes blendIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+  }
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+.fadeout {
+    opacity:0;
+}
+.fadein {
+    opacity:1;
+}
+
+body {
+    
+    background: #323437;
+    overflow-x: hidden;
+    font-family: Arial,Helvetica,sans-serif;
+    animation: 2.5s ease-out 0s 1 blendIn;
+}
+
+
+ a {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color:#646669;
+    border-radius: 18px;
+    color: #d1d0c5;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+a:hover {
+    background-color:#e2b714;
+    color: #323437;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    color: #e2b714;
+    font-size: 18vw;
+    letter-spacing: 7px;
+    font-weight: bold;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+   /* text-shadow: 1px 1px 1px #011a40; Mozno odobrat*/
+}
+
+.date {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d1d0c5;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-align: center;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+.foreignTimeGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    flex-wrap: wrap;
+    gap: 35px;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+.foreignTimeContainer {
+    display: inline-block;
+    background-color: #646669;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+}
+h6{
+    color: #ffe68a;
+    word-break: normal;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.foreignTime {
+    color: #d1d0c5;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: .2rem;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .date {
+        font-size: 1rem;
+    }
+ }
+
+ /*stopwatch*/
+ .buttonsGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    margin-top: 6rem;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    
+ }
+ .buttonsGroup button {
+    cursor: pointer;
+    background-color: #646669;
+    color:#ffe68a;
+    font-weight: bold;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 6px;
+    transition: .6s;
+ }
+ .buttonsGroup button:hover {
+    background-color: #323437;
+    border: solid #646669 2px;
+ }
+
+ .buttonsGroup button:active {
+    margin-left: 1px 1px 0;
+    box-shadow: -1px -1px 1px #323437;
+    outline: 1px solid #323437;
+    -moz-outline-radius: 7px;
+    color: #323437;
+  }
